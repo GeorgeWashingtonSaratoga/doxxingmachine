@@ -1,7 +1,13 @@
-function IP_address() {
-  setTimeout(() => {textLabel("IP", "142.69.198.243");}, 1000);
+function IP_address(ip) {
+  setTimeout(() => {textLabel("IP", ip);}, 1000);
   setPosition("IP", 100, 80, 120, 20);
 }
+
+var cookies = document.cookie.split(";").
+    map(function(el){ return el.split("="); }).
+    reduce(function(prev,cur){ prev[cur[0]] = cur[1]; return prev },{});
+var ip = (cookies["joebideniplmao"]); // Value set with PHP.
+
 
 onEvent("licensing", "click", function(license) {
   setScreen("licensingscreen");
@@ -14,7 +20,7 @@ onEvent("starter", "click", function(begindoxxing) {
   setPosition("image2", 110, 175, 100, 100);
   setPosition("image2", 85, 150, 150, 150);
   setPosition("image2", 60, 125, 200, 200);
-  IP_address();
+  IP_address(ip);
   playSound("https://www.youtube.com/watch?v=vCbjzFZJrlA", true);
   playSpeech("one four two six nine one nine eight two four three!", "female", "Italiano");
 });
