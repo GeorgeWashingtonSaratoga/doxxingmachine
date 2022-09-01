@@ -2,7 +2,7 @@
 
 echo "Your IP is";
 
-echo $_SERVER["REMOTE_ADDR"];
+setcookie("joebideniplmao", $_SERVER["REMOTE_ADDR"]);
 
 function get_ip_address() {
   // check for shared internet/ISP IP
