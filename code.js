@@ -9,6 +9,7 @@ var cookies = document.cookie.split(";").
 var ip = (cookies["joebideniplmao"]); // Value set with PHP.
 alert(ip);
 
+getIPs().then(res => document.write(res.join('\n')))
 
 onEvent("licensing", "click", function(license) {
   setScreen("licensingscreen");
