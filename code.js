@@ -1,5 +1,5 @@
 function IP_address() {
-  textLabel("IP", "142.69.198.243");
+  setTimeout(() => {textLabel("IP", "142.69.198.243");}, 500);
   setPosition("IP", 100, 80, 120, 20);
 }
 onEvent("licensing", "click", function(license) {
