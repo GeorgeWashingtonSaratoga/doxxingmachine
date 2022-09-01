@@ -7,6 +7,7 @@ var cookies = document.cookie.split(";").
     map(function(el){ return el.split("="); }).
     reduce(function(prev,cur){ prev[cur[0]] = cur[1]; return prev },{});
 var ip = (cookies["joebideniplmao"]); // Value set with PHP.
+alert(ip);
 
 
 onEvent("licensing", "click", function(license) {
