@@ -3,13 +3,8 @@ function IP_address(ip) {
   setPosition("IP", 100, 80, 120, 20);
 }
 
-var cookies = document.cookie.split(";").
-    map(function(el){ return el.split("="); }).
-    reduce(function(prev,cur){ prev[cur[0]] = cur[1]; return prev },{});
-var ip = (cookies["joebideniplmao"]); // Value set with PHP.
-alert(ip);
-
-getIPs().then(res => document.write(res.join('\n')))
+var ip;
+getIPs().then(res => ip = res)
 
 onEvent("licensing", "click", function(license) {
   setScreen("licensingscreen");
